@@ -1,0 +1,10 @@
+%grid-col {
+    display: grid;
+    column-gap: calc(var(--gutter) / 2);
+
+    @include breakpoint($tablet-p) {
+        column-gap: var(--gutter);
+    }
+
+    grid-template-columns: [screen-start] calc(var(--sidebearing) - var(--gutter)) [grid-start col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1fr [col-12] 1fr [grid-end] calc(var(--sidebearing) - var(--gutter)) [screen-end];
+}

@@ -1,0 +1,23 @@
+.calendario {
+    @extend %grid-col;
+    overflow: hidden;
+    header {
+        grid-row: 1;
+        grid-column: grid-start / grid-end;
+        text-align: center;
+        font-family: 'ogg', serif;
+        font-size: 6vw;
+        color: var(--colour__accent);
+    }
+    .flickity-viewport {
+        overflow: visible;
+    }
+    .carousel {
+        grid-row: 1;
+        grid-column: grid-start / grid-end;
+        &-cell {
+            width: 50%;
+            margin: 2rem;
+        }
+    }
+}

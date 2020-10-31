@@ -1,0 +1,69 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 100% / 1.4 $text-font-stack;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+%t {
+  &--1 {
+    font-family: 'ogg', serif;
+    @extend %t--2;
+    @extend %font--xxl;
+  }
+  &--2 {
+    @extend %font--xl;
+    line-height: 1;
+    font-weight: 400;
+  }
+}
+
+%font {
+  &--xs {
+    font-size: .6rem;
+  }
+  &--sm {
+    font-size: .8rem;
+  }
+  &--md {
+    font-size: 1rem;
+  }
+  &--lg {
+    font-size: 1.5rem;
+  }
+  &--xl {
+    font-size: 2rem;
+  }
+  &--xxl {
+    font-size: 6vw;
+  }
+}
+
+%smcp {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+em {
+  font-style: normal;
+  font-weight: 500
+}
+
+%inner-link {
+  &:after {
+      content: ' ↗'
+  }
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+  @include on-event {
+      border-color: transparent;
+      text-decoration: none;
+  }
+}

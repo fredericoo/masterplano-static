@@ -1,0 +1,35 @@
+.navbar {
+    position: fixed;
+    width: 40rem;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    a {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        height: 24.5rem;
+        background: var(--colour__accent);
+        transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+    }
+    .support {
+        flex-grow: 1;
+        background: var(--colour__main);
+        display: flex;
+        justify-content: center;
+    }
+
+    @include when-inside('main:not([data-page=home])') {
+        transform: translateX(calc(-100% + 60px));
+        .logo {
+            height: 0px;
+        }
+        @include on-event {
+            transform: translateX(calc(-100% + 70px));
+        }
+    }
+}

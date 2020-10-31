@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'lyyra-expanded';
+    font-weight: 800;
+    src: url('../../assets/fonts/LyyraExpanded-Black.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'editorial-new';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../../assets/fonts/EditorialNew-Regular.woff');
+}
+
+@font-face {
+    font-family: 'ogg';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../../assets/fonts/Ogg-Roman.woff');
+}
+
+@font-face {
+    font-family: 'ogg';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../../assets/fonts/Ogg-Italic.woff');
+}
+
+@font-face {
+    font-family: 'helvetica';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../../assets/fonts/HelveticaLTStd-Roman.woff');
+}

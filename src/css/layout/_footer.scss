@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+    @extend %grid-col;
+    padding: 6rem 0;
+    &__patrocinio {
+        grid-column: grid-start / grid-end;
+        dt {
+            font-family: 'editorial-new', serif;
+            @extend %font--lg;
+        }
+        ul {
+            margin: .5rem -1rem;
+            display: grid;
+            gap: var(--gutter);
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+        p {
+            font-family: 'helvetica', sans-serif;
+            font-weight: 400;
+            a {
+                border-bottom: 1px solid;
+                @include on-event() {
+                    color: inherit;
+                    border-color: var(--colour__accent);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+:root {
+    --colour__bg: #181818;
+    --colour__main: #cac0b8;
+    --colour__accent: #ff4e00;
+    
+    --container__width: 1140px;
+    --gutter: 2rem;
+    --sidebearing: calc((100vw - var(--container__width)) / 2);
+
+    --navbar__height: 100px;
+
+    --font__sm: .9rem;
+    --font__md: 1rem;
+    --font__lg: 1.2rem;
+    --font__xl: 2rem;
+
+    --trk__5: .1em;
+    --trk__4: .08em;
+    --trk__3: .06em;
+    --trk__2: .04em;
+    --trk__1: .02em;
+    --trk__n1: -.02em;
+    --trk__n2: -.04em;
+
+    --easing: cubic-bezier(0.16, 1, 0.3, 1);
+}

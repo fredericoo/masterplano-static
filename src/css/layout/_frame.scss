@@ -1,0 +1,124 @@
+@keyframes blink {
+    from, to {
+    opacity: 0;
+    }
+    50% {
+    opacity: 1;
+    }
+}
+
+.frame {
+	padding: 3rem 5vw;
+	text-align: center;
+	position: relative;
+    z-index: 1000;
+    
+    &__masterplano,
+    &__links a:not(:last-child),
+    &__lineup a:not(:last-child) {
+        margin-right: 1rem;
+    }
+    &__masterplano {
+        img {
+            width: 128px;       
+            display: block;;
+        }
+    }
+
+    &__links {
+        display: inline;
+    }
+
+    &__lineup {
+        margin: 1rem 0;
+    }
+
+    a {
+        pointer-events: auto;
+        @extend %font--sm;
+        @extend %smcp;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--colour__accent);
+        span {
+            vertical-align: .5em;
+        }
+        @include on-event() {
+            color: var(--colour__main);
+            border-bottom: 2px solid;
+        }
+
+        &.live {
+            .red-dot {
+                display: inline-block;
+                background: var(--colour__accent);
+                height: 1em;
+                width: 1em;
+                border-radius: .5em;
+                vertical-align: baseline;
+                -webkit-animation: 1s blink ease infinite;
+                -moz-animation: 1s blink ease infinite;
+                -ms-animation: 1s blink ease infinite;
+                -o-animation: 1s blink ease infinite;
+                animation: 1s blink ease infinite;
+                margin-right: 1em;
+            }
+            
+          }
+          
+    }
+    
+}
+
+@include breakpoint($tablet-l) {
+
+	.frame {
+		position: fixed;
+		text-align: left;
+		z-index: 10000;
+		top: 0;
+		left: 0;
+		display: grid;
+		align-content: space-between;
+		width: 100%;
+		max-width: none;
+		height: 100vh;
+		padding: 3rem;
+		pointer-events: none;
+		grid: 'title links' min-content
+                '... ...' 1fr
+                'masterplano lineup' min-content / 1fr 1fr;
+                            
+        &__title-wrap {
+            grid-area: title;
+            display: flex;
+            position: relative;
+            .clubbersLogo {
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 200px;
+                mix-blend-mode: difference;
+            }
+        }
+        &__masterplano {
+            grid-area: masterplano;
+            justify-self: start;
+            margin: 0;
+            img {
+                transform-origin: top left;
+                transform: rotate(-90deg);
+            }
+        }
+        &__lineup {
+            margin: 0;
+            grid-area: lineup;
+            justify-self: end;
+        }
+        &__links {
+            grid-area: links;
+            padding: 0;
+            justify-self: end;
+        }
+    }
+}

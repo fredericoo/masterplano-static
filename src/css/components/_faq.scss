@@ -1,0 +1,82 @@
+.faq {
+    @extend %grid-col;
+    &__titulo {
+        font-family: 'ogg', serif;
+        font-style: italic;
+        font-size: 4vw;
+        grid-column: grid-start / span 4;
+        canvas {
+            width: 100%;
+        }
+    }
+    p {
+        grid-column: grid-start / grid-end;
+        @include breakpoint($tablet-l) {
+            grid-column: span 8 / grid-end;
+        }
+    }
+    &__perguntas {
+        font-family: 'editorial-new', serif;
+        grid-column: grid-start / grid-end;
+        @include breakpoint($tablet-l) {
+            grid-column: span 8 / grid-end;
+        }
+        @extend %font--lg;
+        dt {
+            text-indent: 4em;  
+            span {
+                border-bottom: 1px solid;
+            }
+            .view {
+                margin-left: .5rem;
+                color: var(--colour__accent);
+                display: inline-block;
+                height: 1em;
+                width: 1em;
+                svg {
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    transform: translateY(.2em);
+                }
+                @include on-event() {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        dd {
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            .word{
+                color: transparent;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: .8em;
+                    width: 100%;
+                    left: 0;
+                    bottom: .1em;
+                    background: var(--colour__main);
+                }
+            }
+        }
+
+        dt.open{
+            & +  dd {
+                .word {
+                    color: var(--colour__main);
+                    &:before {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+        dt.open {
+            .view {
+                color: var(--colour__main);
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.intro {
+    &__canvas {
+        margin: 100px auto 0;
+        width: 100vw;
+        max-width: 600px;
+        display: grid;
+    }
+    &__bg, &__fg {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+    &__fg {
+        mix-blend-mode: screen;
+    }
+
+    &__datas {
+        @extend %grid-col;
+        height: 50vh;
+        h2 {
+            position: relative;
+            align-self: stretch;
+
+            @extend %t--1;
+            color: var(--colour__accent);
+            grid-column: grid-start / grid-end;
+            font-style: italic;
+            span {
+                font-style: normal;
+                font-family: 'editorial-new', serif;
+            }
+            .emdash {
+                display: inline-block;
+                width: 1em;
+                border-bottom: .05em solid;
+                transform: translateY(-.4em);
+            }
+        }
+        .gratis {
+            grid-column: col-6 / grid-end;
+        }
+    }
+}
