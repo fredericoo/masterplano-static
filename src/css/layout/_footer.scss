@@ -6,6 +6,12 @@
     padding: 6rem 0;
     &__patrocinio {
         grid-column: grid-start / grid-end;
+        .disclaimer {
+            text-transform: uppercase;
+            max-width: 55ch;
+            @extend %font--sm;
+            margin-bottom: 2rem;
+        }
         dt {
             font-family: 'editorial-new', serif;
             @extend %font--lg;

@@ -18,9 +18,9 @@ export const setupTriggers = () => {
         scrollTrigger: {
           trigger: introSection,
           start: "top top",
-          end: "bottom center",
+          end: "center center",
           scrub: 1,
-        //   markers: true
+          // markers: true
         }
     })
     
