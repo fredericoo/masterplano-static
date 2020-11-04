@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clubbers da Esquina — Masterplano</title>
     <link rel="stylesheet" href="dist/css/main-min.css?v=3">
 </head>
 
@@ -44,8 +44,8 @@
                 <dt>Patrocínio</dt>
                 <dd>
                     <ul>
-                        <li><img src="assets/img/lapisraro.svg" alt="Lapisraro"></li>
                         <li><img src="assets/img/unibh.svg" alt="Unibh"></li>
+                        <li><img src="assets/img/lapisraro.svg" alt="Lapisraro"></li>
                     </ul>
                 </dd>
                 <p>Estamos abertos para novas parcerias! <a href="mailto:mstrplano@gmail.com">mstrplano@gmail.com</a></p>
